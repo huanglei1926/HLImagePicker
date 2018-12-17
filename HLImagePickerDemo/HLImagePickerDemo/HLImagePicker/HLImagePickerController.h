@@ -14,6 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/** imageArray为UIImage集合,assetArray为PHAsset集合 */
 typedef void(^HLSelectFinishBlock)(NSArray *imageArray, NSArray *assetArray, HLImagePickerController *imagePicker);
 typedef void(^HLSelectCancelBlock)(void);
 

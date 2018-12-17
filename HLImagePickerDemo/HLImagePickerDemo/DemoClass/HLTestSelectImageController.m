@@ -162,11 +162,17 @@ static CGFloat deleteButtonW = 25;
 
 - (void)showImagePickerVc{
     HLImagePickerController *imageVc = [[HLImagePickerController alloc] init];
+    /** 最大张数,默认9张,0为不限 */
     imageVc.maxImagesCount = [self.configScrollView.maxCountTextField.text integerValue];
+    /** 最小张数,默认1张 */
     imageVc.minImagesCount = [self.configScrollView.minCountTextField.text integerValue];
+    /** 是否开启拍照,默认开启 */
     imageVc.isShowCamera = self.configScrollView.cameraSwitch.isOn;
+    /** 是否允许预览图片,默认YES */
     imageVc.isAllowPreview = self.configScrollView.previewSwitch.isOn;
+    /** 是否自动销毁控制器,默认YES */
     imageVc.isAutoDismiss = self.configScrollView.autoDismissSwitch.isOn;
+    /** imageArray为UIImage集合,assetArray为PHAsset集合 */
     @HLWeakify(self)
     imageVc.selectFinishBlock = ^(NSArray * _Nonnull imageArray, NSArray * _Nonnull assetArray, HLImagePickerController * _Nonnull imagePicker) {
         @HLStrongify(self)
