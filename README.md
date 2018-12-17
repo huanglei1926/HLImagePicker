@@ -1,6 +1,6 @@
 # HLImagePicker
-一个图片选择框架
-### 借鉴了TZImagePickerController的部分思路
+## 一个图片选择框架
+借鉴了TZImagePickerController的部分思路
 
 ### 1.Demo设置示例
 <img src="https://github.com/huanglei1926/HLImagePicker/blob/master/images/HLImagePickerDemo-1.png" width="375" height="812" alt="Demo设置示例"/>
